@@ -1,0 +1,30 @@
+﻿<Window x:Class="BroadlinkControl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BroadlinkControl"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <Grid DockPanel.Dock="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" x:Name="_buttonScanNetwork" Content="Scan" ToolTip="Scan for broadlink devices" Click="_buttonScanNetwork_Click"/>
+            <ComboBox Grid.Column="1" x:Name="_comboBoxDevices"/>
+            <Button Grid.Column="2" x:Name="_buttonLearnIr" Content="Learn IR" ToolTip="Start learning IR code" Click="_buttonLearnIr_Click"/>
+            <Button Grid.Column="3" x:Name="_buttonLearnRf" Content="Learn RF" ToolTip="Start learning RF code" Click="_buttonLearnRf_Click"/>
+            <Button Grid.Column="4" x:Name="_buttonSend" Content="Send" ToolTip="Send the latest code learned" Click="_buttonSend_Click"/>
+            <Button Grid.Column="5" x:Name="_buttonSave" Content="Save" ToolTip="Save output to file" Click="_buttonSave_Click"/>
+            <Button Grid.Column="6" x:Name="_buttonClear" Content="Clear" ToolTip="Clear output window" Click="_buttonClear_Click"/>
+        </Grid>
+        <TextBox x:Name="_textBoxOutput" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"/>
+    </DockPanel>
+</Window>

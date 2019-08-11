@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29201.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BroadlinkControl", "BroadlinkControl\BroadlinkControl.csproj", "{FCB4A428-9A7E-4168-9CC7-99821B0CE8CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCB4A428-9A7E-4168-9CC7-99821B0CE8CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCB4A428-9A7E-4168-9CC7-99821B0CE8CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCB4A428-9A7E-4168-9CC7-99821B0CE8CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCB4A428-9A7E-4168-9CC7-99821B0CE8CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB6C3FC5-BEC4-4895-8818-FAB31262FDA8}
+	EndGlobalSection
+EndGlobal

@@ -3,7 +3,7 @@ A simple WPF Application to get IR- and RF-codes from Broadlink devices
 
 ## Requirement
 - Windows 10
-- .Net Framework 4.6.2
+- .Net Framework 4.6.1
 
 ## Licence
 [MIT Licence](https://github.com/PainElemental/BroadlinkControl/blob/master/LICENSE)

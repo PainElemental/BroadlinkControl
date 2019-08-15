@@ -8,7 +8,7 @@ using System.Windows;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("BroadlinkControl")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Learn IR- and RF-codes with broadlink devices")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("BroadlinkControl")]

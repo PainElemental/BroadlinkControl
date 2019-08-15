@@ -58,7 +58,14 @@ namespace BroadlinkControl
         {
             if (Devices.Length > 0)
             {
-                await LearnIr();
+                try
+                {
+                    await LearnIr();
+                }
+                catch (Exception)
+                {
+                    AddOutputText("Command learning cancelled");
+                }
             }
         }
 
@@ -66,7 +73,14 @@ namespace BroadlinkControl
         {
             if (Devices.Length > 0)
             {
-                await LearnRf();
+                try
+                {
+                    await LearnRf();
+                }
+                catch(Exception)
+                {
+                    AddOutputText("Command learning cancelled");
+                }
             }
         }
 
@@ -76,7 +90,14 @@ namespace BroadlinkControl
                 LatestCommand != null &&
                 LatestCommand.Length > 0)
             {
-                await Send();
+                try
+                {
+                    await Send();
+                }
+                catch (Exception)
+                {
+                    AddOutputText("Command sending cancelled");
+                }
             }
         }
 
@@ -192,6 +213,11 @@ namespace BroadlinkControl
             AddOutputText($"RawData : {command.ByteToHex()}");
             AddOutputText($"RawData Base64 : {command.ToBase64()}");
 
+            if (LatestCommand != null &&
+                LatestCommand.ByteToHex() == command.ByteToHex())
+            {
+                Console.WriteLine("Last command is the same as the new command!");
+            }
             LatestCommand = command;
             LatestCommandType = CommandType.IR;
 
@@ -246,6 +272,11 @@ namespace BroadlinkControl
             AddOutputText($"RawData : {command.ByteToHex()}");
             AddOutputText($"RawData Base64 : {command.ToBase64()}");
 
+            if(LatestCommand != null &&
+               LatestCommand.ByteToHex() == command.ByteToHex())
+            {
+                Console.WriteLine("Last command is the same as the new command!");
+            }
             LatestCommand = command;
             LatestCommandType = CommandType.RF;
 
